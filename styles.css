@@ -65,11 +65,14 @@ footer{
 	height: 120px;
 	background-color: black;
 	position: relative;
-	bottom: 166px;
+	bottom: 136px;
 	border-radius: 0px 0px 10px 10px;
 }
 .p3{
+	float: right;
 	font-size: 25px;
 	text-align: center;
-	color: white;
+	color: #D10E0E;
+
+
 }
