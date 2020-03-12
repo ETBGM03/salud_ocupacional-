@@ -102,6 +102,12 @@ nav{
 
 }
 
+.sex{
+    border: 1px solid blue;
+    margin-bottom: 5%;
+    margin-left: 3%;
+}
+
 #boton{
     color: rgb(255, 255, 255);
     font-size: large;
