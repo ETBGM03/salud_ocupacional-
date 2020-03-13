@@ -35,7 +35,7 @@
 					<select class="input" name="sexo" id="">
 						<option class="sex" value="0"> </option>
 						<option class="sex" value="1"> CHICO</option>
-						<option class="sex" value="2"> CHICA</option>
+						<option class="sex" value="10"> CHICA</option>
 					</select>
 					<br>
 					<label class="input" for="">¿Peso en kg?</label>
@@ -50,13 +50,12 @@
 					<br>
 					<input class="input" type="text" name="estatura" placeholder="1,78" id="metros"> <label > m </label>
 					<br>
-					<input type="button" name="calculo" id="boton" value="Calcular">
+					<input type="button" name="calculo" id="boton" value="Calcular" onclick= Calcular()>
 					
 				</form>
 			</div>
 
 				<div id="recom">
-					
 					<h1> Recomendaciones: </h1>
 
 
@@ -68,27 +67,30 @@
 	<script>
 		function Calcular();
 		var sex, kg, metros;
-		if () {
-			
+		
+		sex = parseInt(document.getElementsByClassName("sex").value);
+		
+		if (sex < 5) {
+		
+		metros = parseInt(document.getElementById("metros").value);
+		kg = parseInt(document.getElementById("pesoactual").value);
+
+		m2 = metros * metros;
+		calchico  = kg/m2;
+		
+		document.write(calchico + "kg es tu peso ideal")
+
+
 		} else {
-			
+		metros = parseInt(document.getElementById("metros").value);
+		kg = parseInt(document.getElementById("pesoactual").value);
+
+		m2 = metros * metros;
+		resta = kg/m2;
+		calchica  = resta - 1;
+		
+		document.getElementById("recom") = document.write(calchica + "kg es tu peso ideal")
 		}
-		
-		sex = parseInt(document.getElementsByClassName("sex").value);
-		metros = parseInt(document.getElementById("metros").value);
-		kg = parseInt(document.getElementById("pesoactual").value);
-
-		m2 = metros * metros;
-		calculochico = kg/m2;
-		
-		
-		sex = parseInt(document.getElementsByClassName("sex").value);
-		metros = parseInt(document.getElementById("metros").value);
-		kg = parseInt(document.getElementById("pesoactual").value);
-
-		m2 = metros * metros;
-		calculochico = kg/m2;
-		calculochica=calculochico - 1;
 	
 
 	</script>
