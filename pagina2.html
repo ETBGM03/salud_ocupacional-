@@ -23,8 +23,10 @@
 		<div id="seccion">
 			<div id="instrucciones">
 				<h1> COMO USARLO </h1>
-				<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in alias fugiat nesciunt quibusdam ipsa adipisci labore quasi nemo nihil natus cumque eaque doloremque omnis sunt optio error, praesentium atque?</p>				
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis numquam doloremque pariatur delectus qui ratione laboriosam hic debitis officiis, reiciendis quam praesentium excepturi ut voluptatibus exercitationem reprehenderit corrupti accusamus nisi.</p>
+				<p id="isexo"> Lorem fnis sunt optio error, praesentium atque?</p>				
+				<p id="ikg">Lorem ionem reprehenderit corrupti accusamus nisi.</p>
+				<p id="iedad">Lorem nem reprehenderit corrupti accusamus nisi.</p>
+				<p id="italla">Lorem em reprehenderit corrupti accusamus nisi.</p>
 			</div>
 
 			<div id="cont-form">
@@ -32,9 +34,9 @@
 					
 					<label for="" class="etiqueta"> Sexo</label>
 					<br>
-					<select class="input" name="sexo" id="">
+					<select class="input" name="sexo" id="sex">
 						<option class="sex" value="0"> </option>
-						<option class="sex" value="1"> CHICO</option>
+						<option class="sex" value="2"> CHICO</option>
 						<option class="sex" value="10"> CHICA</option>
 					</select>
 					<br>
@@ -50,48 +52,123 @@
 					<br>
 					<input class="input" type="text" name="estatura" placeholder="1,78" id="metros"> <label > m </label>
 					<br>
-					<input type="button" name="calculo" id="boton" value="Calcular" onclick= Calcular()>
+					<input type="button" id="boton" value="Calcular"  onclick= "Calcular()">
 					
 				</form>
 			</div>
+			
+				<div id="Datos">
+					<h1> Datos: </h1>
+
+					<p id ="IMC">  </p>
+					<br>
+					<p id ="peso">  </p>
+
+
+				</div>
+
 
 				<div id="recom">
 					<h1> Recomendaciones: </h1>
 
+					<p id ="IMC">  </p>
+					<br>
+					<p id ="peso">  </p>
+
 
 				</div>
+
 
 		</div>
 		
 
 	<script>
-		function Calcular();
-		var sex, kg, metros;
-		
-		sex = parseInt(document.getElementsByClassName("sex").value);
-		
-		if (sex < 5) {
-		
-		metros = parseInt(document.getElementById("metros").value);
+		function Calcular()
+        {
+
+		var sex, kg, metros, calchico, calchica, resultado, resultado2, 
+		resultado, IMCB, IMCG ;
+
+		sex = parseInt(document.getElementById("sex").value);
+		metros = parseFloat(document.getElementById("metros").value);
 		kg = parseInt(document.getElementById("pesoactual").value);
-
 		m2 = metros * metros;
-		calchico  = kg/m2;
+        resultado = kg/m2.toFixed(2);	
+        IMCB  = resultado.toFixed(2);
+
+        resultado2 = resultado;
+        IMCG = resultado2.toFixed(2);
+
+       if (sex <= 2) {
+
+        document.getElementById("IMC").textContent = (IMCB + "kg es tu indice de masa corporal");
+       
+       } else {
+        
+        document.getElementById("IMC").textContent = (IMCG + "kg es tu indice de masa corporal");
+       }
 		
-		document.write(calchico + "kg es tu peso ideal")
+	   if (IMCB < 20) {
+
+		document.getElementById("peso").textContent = (IMCB + "Tienes un peso bajo");
+
+	   } else {	
+		   if (IMCB > 20 && IMCB < 25) {
+			   
+			document.getElementById("peso").textContent = (IMCB + "Tienes un peso normal");
+
+		   } else {
+			   		if (IMCB > 25 && IMCB < 30) {
+					document.getElementById("peso").textContent = (IMCB + "Tienes sobrepeso");
+
+			   } else {
+
+					if (IMCB > 30) {
+					document.getElementById("peso").textContent = (IMCB + "Tienes obesidad");
+				} else {
+					
+				}
+
+			   }
+
+		   }
+	   }
+	  	 
+
+			if (IMCG < 19) {
+
+			document.getElementById("peso").textContent = (IMCG + "Tienes un peso bajo");
+
+			} else {	
+			if (IMCG > 20 && IMCG < 24) {
+				
+				document.getElementById("peso").textContent = (IMCG + "Tienes un peso normal");
+
+			} else {
+						if (IMCG > 24 && IMCG < 29) {
+						document.getElementById("peso").textContent = (IMCG + "Tienes sobrepeso");
+
+				} else {
+
+						if (IMCG > 2) {
+						document.getElementById("peso").textContent = (IMCG + "Tienes obesidad");
+					} else {
+						
+					}
+
+				}
+
+			}
+			}
 
 
-		} else {
-		metros = parseInt(document.getElementById("metros").value);
-		kg = parseInt(document.getElementById("pesoactual").value);
-
-		m2 = metros * metros;
-		resta = kg/m2;
-		calchica  = resta - 1;
+        }
 		
-		document.getElementById("recom") = document.write(calchica + "kg es tu peso ideal")
+		function recomlact() {
+			document.getElementById("lacteos").textContent = ("texto" + variables )
 		}
-	
+
+
 
 	</script>
 
