@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contenedor{
+    border: 1px solid black;
+    margin: auto;
+    width: 90%;
+    height: 1000px;
+
+
+}
+
+header{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img1{
+    width: 100%;
+}
+
+p{
+   text-align: justify;
+   color: green;
+   font-size: medium;
+
+}
+
+nav{
+    background-color: royalblue;
+    border: 1px solid chocolate;
+    height: 50px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.a1{
+    text-decoration-line: none;
+    color: whitesmoke;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.a1:hover{
+    background-color: rgba(230, 223, 223, 0.425);
+}
+
+#actual{
+    background-color: rgb(229, 255, 0);
+    border-radius: 10px 10px 10px 10px;
+}
+
+#actual:hover{
+    background-color: rgba(230, 223, 223, 0.425);
+
+}
+
+#seccion{
+    border: 1px solid violet;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#instrucciones{
+    border: 1px solid green;
+    height: 30%;
+    width: 90%;
+    text-align: center;
+}
+
+#cont-form{
+    border: 1px solid black;
+    background-color: rgba(230, 223, 223, 0.555);
+    height: 55%;
+    width: 25%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 1%;
+
+
+}
+
+.etiqueta{
+    font-size: large;
+}
+
+.input{
+    margin-bottom: 10px;
+    width: 75%;
+    height: 10%;
+}
+.caja{
+    color: red;
+}
+
+#sex{
+    border: 1px solid blue;
+    width: 75%;
+    height: 10%;
+}
+
+#boton{
+    color: rgb(255, 255, 255);
+    font-size: large;
+    margin-left: 20%;
+    background-color: rgb(243, 135, 135);
+    height: 15%;
+    width: 50%;
+}
+
+#recom{
+    border: 1px solid rgb(0, 3, 190);
+    height: 55%;
+    width: 30%;
+    margin-top: 1%;
+
+}
+
+#Datos{
+    border: 1px solid rgb(0, 3, 190);
+    height: 55%;
+    width: 30%;
+    margin-top: 1%;
+    font-size: medium;
+
+}
+
+#peso-b{
+    color: pink;
+    font-size: 20px;
+}
+#peso-n{
+    color: green;
+    font-size: 20px;   
+}
+#peso-s{
+    color: rgb(229, 255, 0);
+    font-size: 20px;
+}
+#peso-o{
+    color:  red;
+    font-size: 20px;
+}
+
+#pesoidealmin{
+    color:  red;
+    font-size: 20px;
+}
