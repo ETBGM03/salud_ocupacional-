@@ -23,8 +23,8 @@
 		<div id="seccion">
 			<div id="instrucciones">
 				<h1> COMO USARLO </h1>
-				<p id="isexo"> Lorem fnis sunt optio error, praesentium atque?</p>				
-				<p id="ikg">Lorem ionem reprehenderit corrupti accusamus nisi.</p>
+				<p id="isexo"> Sexo: Cual es tu sexo.</p>				
+				<p id="ikg"> Kilogramos:</p>
 				<p id="iedad">Lorem nem reprehenderit corrupti accusamus nisi.</p>
 				<p id="italla">Lorem em reprehenderit corrupti accusamus nisi.</p>
 			</div>
@@ -36,8 +36,8 @@
 					<br>
 					<select class="input" name="sexo" id="sex">
 						<option class="sex" value="0"> </option>
-						<option class="sex" value="2"> CHICO</option>
-						<option class="sex" value="10"> CHICA</option>
+						<option class="sex" value="2"> Masculino</option>
+						<option class="sex" value="10"> Femenino</option>
 					</select>
 					<br>
 					<label class="input" for="">¿Peso en kg?</label>
@@ -53,18 +53,31 @@
 					<input class="input" type="text" name="estatura" placeholder="1,78" id="metros"> <label > m </label>
 					<br>
 					<input type="button" id="boton" value="Calcular"  onclick= "Calcular()">
+					<input type="button" id="boton" value="Calcular"  onclick= "pesoidealmaximohombre()">
 					
 				</form>
 			</div>
 			
 				<div id="Datos">
-					<h1> Datos: </h1>
+					<h1> IMC: </h1>
 
 					<p id ="IMC">  </p>
 					<br>
-					<p id ="peso">  </p>
+					<hr>
+					<h1> Estoy en: </h1>
 
-
+					<p id ="peso-b">  </p>
+					<p id ="peso-n">  </p>
+					<p id ="peso-s">  </p>
+					<p id ="peso-o">  </p>
+					<br>
+					<hr>
+					
+					<h1> Mi peso ideal es: </h1>
+					<p id ="peso-s">  </p>
+					<p id="pesoidealmin"> </p>
+					<p id="pesoidealmax">  </p>
+					<hr>
 				</div>
 
 
@@ -76,6 +89,7 @@
 					<p id ="peso">  </p>
 
 
+
 				</div>
 
 
@@ -83,11 +97,15 @@
 		
 
 	<script>
+		
+
 		function Calcular()
         {
 
-		var sex, kg, metros, calchico, calchica, resultado, resultado2, 
-		resultado, IMCB, IMCG ;
+		var sex, kg, metros, calchico, m2, calchica, resultado, resultado2, 
+		resultado, IMCB, IMCG, pi, pimin, pimax, pmaxb, pminb, pming, pmaxg ;
+		
+
 
 		sex = parseInt(document.getElementById("sex").value);
 		metros = parseFloat(document.getElementById("metros").value);
@@ -98,33 +116,37 @@
 
         resultado2 = resultado;
         IMCG = resultado2.toFixed(2);
+		
 
-       if (sex <= 2) {
+       if (sex < 2) {
 
-        document.getElementById("IMC").textContent = (IMCB + "kg es tu indice de masa corporal");
-       
-       } else {
+        document.getElementById("IMC").textContent = (IMCB + " kg es tu indice de masa corporal");
         
-        document.getElementById("IMC").textContent = (IMCG + "kg es tu indice de masa corporal");
+       } else{
+        
+        document.getElementById("IMC").textContent = (IMCG + " kg es tu indice de masa corporal");
        }
 		
+
+
+
 	   if (IMCB < 20) {
 
-		document.getElementById("peso").textContent = (IMCB + "Tienes un peso bajo");
+		document.getElementById("peso-b").textContent = ("Tienes un peso bajo");
 
 	   } else {	
 		   if (IMCB > 20 && IMCB < 25) {
 			   
-			document.getElementById("peso").textContent = (IMCB + "Tienes un peso normal");
+			document.getElementById("peso-n").textContent = ("Tienes un peso normal");
 
 		   } else {
 			   		if (IMCB > 25 && IMCB < 30) {
-					document.getElementById("peso").textContent = (IMCB + "Tienes sobrepeso");
+					document.getElementById("peso-s").textContent = ("Tienes sobrepeso");
 
 			   } else {
 
 					if (IMCB > 30) {
-					document.getElementById("peso").textContent = (IMCB + "Tienes obesidad");
+					document.getElementById("peso-o").textContent = ("Tienes obesidad");
 				} else {
 					
 				}
@@ -137,21 +159,23 @@
 
 			if (IMCG < 19) {
 
-			document.getElementById("peso").textContent = (IMCG + "Tienes un peso bajo");
+			document.getElementById("peso-b").textContent = ("Tienes un peso bajo");
 
 			} else {	
+			
+			
 			if (IMCG > 20 && IMCG < 24) {
 				
-				document.getElementById("peso").textContent = (IMCG + "Tienes un peso normal");
+				document.getElementById("peso-n").textContent = ("Tienes un peso normal");
 
 			} else {
 						if (IMCG > 24 && IMCG < 29) {
-						document.getElementById("peso").textContent = (IMCG + "Tienes sobrepeso");
+						document.getElementById("peso-s").textContent = ("Tienes sobrepeso");
 
 				} else {
 
 						if (IMCG > 2) {
-						document.getElementById("peso").textContent = (IMCG + "Tienes obesidad");
+						document.getElementById("peso-o").textContent = ("Tienes obesidad");
 					} else {
 						
 					}
@@ -162,12 +186,28 @@
 			}
 
 
+			sex = document.getElementById("sex").value = "";
+			metros = document.getElementById("metros").value = "";
+			kg = document.getElementById("pesoactual").value = "";
         }
 		
-		function recomlact() {
-			document.getElementById("lacteos").textContent = ("texto" + variables )
-		}
+		pmaxb = parseFloat(24);
+		pminb = parseFloat(19);
 
+		pmaxg = parseFloat(25);
+		pming = parseFloat(20);
+
+		var pimax = function pesoidealmaximohombre() {
+				return pmaxb * m2;	
+				
+				document.getElementById("pesoidealmax").innerHTML = pimax;
+}
+
+		
+
+		var pimin = function pesoidealfemenino(){
+				return pminb * m2;
+		}
 
 
 	</script>

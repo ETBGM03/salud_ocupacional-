@@ -61,7 +61,7 @@ nav{
 #seccion{
     border: 1px solid violet;
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -72,7 +72,7 @@ nav{
 #instrucciones{
     border: 1px solid green;
     height: 30%;
-    width: 100%;
+    width: 90%;
     text-align: center;
 }
 
@@ -99,7 +99,7 @@ nav{
     height: 10%;
 }
 .caja{
-
+    color: red;
 }
 
 .sex{
@@ -130,8 +130,33 @@ nav{
     height: 55%;
     width: 30%;
     margin-top: 1%;
+    font-size: medium;
 
 }
+
+#peso-b{
+    color: pink;
+    font-size: 20px;
+}
+#peso-n{
+    color: green;
+    font-size: 20px;   
+}
+#peso-s{
+    color: rgb(229, 255, 0);
+    font-size: 20px;
+}
+#peso-o{
+    color:  red;
+    font-size: 20px;
+}
+
+#pesoidealmin{
+    color:  red;
+    font-size: 20px;
+}
+
+
 
 
 

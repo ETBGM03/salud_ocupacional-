@@ -1,0 +1,35 @@
+Your Account Details
+
+Your account is now active.
+Main Hosting Details
+
+Control panel username
+ottos_25376225
+
+Control panel password	**********
+
+Control panel URL
+cpanel.tonohost.com
+
+MySQL username
+ottos_25376225
+
+MySQL password
+**********
+
+MySQL hostname
+sql300.tonohost.com
+
+FTP username
+ottos_25376225
+
+FTP password
+**********
+
+FTP host name
+ftp.tonohost.com
+
+
+Your Website URL's
+Home page
+http://saludocupacional.tonohost.com
