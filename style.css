@@ -20,6 +20,10 @@ header{
     justify-content: center;
 }
 
+.img1{
+    width: 100%;
+}
+
 p{
    text-align: justify;
    color: green;
@@ -102,10 +106,10 @@ nav{
     color: red;
 }
 
-.sex{
+#sex{
     border: 1px solid blue;
-    margin-bottom: 5%;
-    margin-left: 3%;
+    width: 75%;
+    height: 10%;
 }
 
 #boton{

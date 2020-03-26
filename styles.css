@@ -1,7 +1,6 @@
 #container{
   border-color: red;
   width: 90%;
-  height: 1500px;
   margin: auto;
   background-color: lightblue;
   border-radius: 0px 0px 10px 10px;
@@ -36,7 +35,7 @@
 	border-radius: 10px 10px 10px 10px;
 }
 .img1{
-
+	width: 100%;
 }
 
 .aside1{
