@@ -81,7 +81,7 @@ nav{
     border: 1px solid blue;
     background-color: rgba(230, 223, 223, 0.555);
     border-radius: 12px 12px 12px 12px;
-    height: 55%;
+    height: 58%;
     width: 25%;
     display: flex;
     align-content: center;
@@ -128,7 +128,7 @@ nav{
 #recom{
     border: 1px solid rgb(0, 3, 190);
 
-    height: 55%;
+    height: 58%;
     width: 30%;
     margin-top: 1%;
     border-radius: 12px 12px 12px 12px;
@@ -152,7 +152,7 @@ nav{
 
 #Datos{
     border: 1px solid rgb(0, 3, 190);
-    height: 55%;
+    height: 58%;
     width: 30%;
     margin-top: 1%;
     font-size: medium;
