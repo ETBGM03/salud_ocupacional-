@@ -1,5 +1,5 @@
 	<!DOCTYPE html>
-<html lang="es">
+<html>
 		<link rel="stylesheet" href="css/styl.css">
 		<link rel="stylesheet" href="css/style.css">
 	<head>
@@ -78,11 +78,10 @@
 						<h1> Recomendaciones: </h1>
 				
 						<p id ="recomen">  </p>
-						 
-				
-				
-				
+					
 					</div>
+					<a id= "reset" href="formulario.html">Reiniciar</a>
+
 			</div>
 				
 		<script>
@@ -176,7 +175,6 @@
 							if (sex > 5 && sex < 10){
 						document.getElementById("IMC").textContent = (IMC + "  es tu indice de masa corporal");
 							function calculofemenino(){
-								alert("chica etra");
 								if (IMC < 19) {
 				
 									document.getElementById("peso-b").textContent = ("Tienes un peso bajo");
@@ -190,7 +188,7 @@
 				
 									} else {
 												if (IMC > 24 && IMC < 29) {
-												document.getElementById("peso-s").textContent = ("Tienes sobrepeso");
+												document.getElementById("peso-s").textContent = ("Estas en sobrepeso");
 				
 										} else {
 				
@@ -243,7 +241,7 @@
 							 
 							pimax = pmaxb * m2;		
 							pimin = pminb * m2;
-							document.getElementById("pesoidealmax").textContent = ("Tu peso  maximo" + pimax.toFixed(2) );
+							document.getElementById("pesoidealmax").textContent = ("Tu peso  maximo es: " + pimax.toFixed(2) );
 							document.getElementById("pesoidealmin").textContent = ("Tu peso ideal minimo es: " + pimin.toFixed(2));
 							
 						} else {
@@ -255,7 +253,9 @@
 						}
 						}
 						
-
+				
+					
+				
 						
 						
 						}
