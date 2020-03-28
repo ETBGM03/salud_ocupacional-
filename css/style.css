@@ -131,7 +131,6 @@ nav{
 
 #recom{
     border: 1px solid rgb(0, 3, 190);
-
     height: 58%;
     width: 30%;
     margin-top: 1%;
@@ -149,6 +148,7 @@ nav{
 #recomen{
     justify-self: right;
     font-size: x-large;
+    color: black;
     width: 90%;
     height: 280px;
     margin: 10px;

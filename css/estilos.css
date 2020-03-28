@@ -7,12 +7,18 @@
   border-radius: 10px 10px 10px 10px;
 
 }
-
-.div001{
-	background-color: orange;
-
-
+.a1{
+	text-decoration-line: none;
+    color: whitesmoke;
 }
+.a1:hover{
+    background-color: rgba(230, 223, 223, 0.425);
+}
+#actual{
+	background-color: yellow;
+	border-radius: 10px 10px 10px 10px;
+}
+
 .imagen{
 
   border-radius: 10px 10px 10px 10px;
@@ -50,6 +56,7 @@
 	text-decoration-line: none;
     color: whitesmoke;
 }
+
 .nav1{
 	background-color: royalblue;
     border: 1px solid chocolate;
@@ -99,25 +106,31 @@
 	height: 260px;
 	background-color: white;
 	position: relative;
-	bottom: -20px;
+	bottom: -30px;
 	margin-left: 20PX;
 	border-radius: 10px 10px 10px 10px;
 }
 
 .asa4{
 
-	width: 320px;
+	width: 300px;
 	height: 600px;
 	background-color: pink;
 	position: relative;
 	bottom: 688px;
 	float: right;
 	border-radius: 10px 10px 10px 10px;
+	margin: -5;
+	margin-right: 20px;
 }
 .titulogal{
 	text-align: center;
 	position: relative;
-	bottom: 10px;
-	margin: 10px;
 
+
+}
+.fon01{
+	margin-left: 30%;
+	margin-bottom: 20px;
+	
 }
